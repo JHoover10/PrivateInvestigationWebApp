@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/Content/simple-sidebar.css" rel="stylesheet"/>
+    <script src="/scripts/jquery-1.9.1.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            position: absolute;
+            right: 27px;
+            top: -113px;
+        }
+    </style>
+</head>
+<body onload="gentimeline()">
+    <form runat="server">
+        <nav class="navbar navbar-inverse" color: white; background-color: #262626">
+            <img src="/Images/MKTG%20-%20CQI_Final_Logo.png" class="img-responsive" style="margin: auto" />
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Dashboard.aspx">Dashboard</a></li>
+                    <li><a href="/Cases/CasePage.aspx">Cases Page</a></li>
+                    <li><a href="/Tasks/TasksTab.aspx">Tasks</a></li>
+                    <li><a href="/BillingPage.aspx">Billing</a></li>
+                    <%--<li><a href="#">Templates</a></li>--%>
+                    <asp:LinkButton ID="LoginLink" runat="server" Text="Click Here To Login" CausesValidation="False" OnClick="LoginLink_Click"></asp:LinkButton>
+                </ul>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

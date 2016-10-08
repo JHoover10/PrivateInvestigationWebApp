@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46907ECD-22A0-4D86-BAFC-B76EEABFD23A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BoxView, Version=1.0.5626.30528, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\BoxView.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Open XML SDK\V2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\..\..\baker\WebApplication1\packages\DotNetZip.1.9.8\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ForgotLogin.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Registration.aspx" />
+    <Content Include="BillingPage.aspx" />
+    <Content Include="Cases\CaseAdd.aspx" />
+    <Content Include="Cases\CaseAddEvent.aspx" />
+    <Content Include="Cases\CaseDelete.aspx" />
+    <Content Include="Cases\CaseEditSelected.aspx" />
+    <Content Include="Cases\CaseInfo.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\simple-sidebar.css" />
+    <Content Include="default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GlobalVariables.aspx" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\MKTG - CQI_Final_Logo.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Records\RecordsAdd.aspx" />
+    <Content Include="Records\RecordsDelete.aspx" />
+    <Content Include="Records\RecordsEdit.aspx" />
+    <Content Include="Records\RecordsEditSelected.aspx" />
+    <Content Include="Records\RecordsLog.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\Investigation Process and Procedures &amp; Workflow 012616.docx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Client Fact Discrepancy Summary 120315.docx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Defense Fact Discrepancy Summary 012616.docx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Investigation Activity Timeline 012716.xlsx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Investigation Attorney Request Log 012716.xlsx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Investigation Interview 102515.docx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Investigation Record Order Log 030916.xlsx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Investigation Trial Prep Checklist 012216.docx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Investigation Witness Log 012716.xlsx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - State and Defense Evidence Log 012716.xlsx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - State Fact Discrepancy Summary 012616.docx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML - Witness List &amp; Depo Scheduling 102715.xlsx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML- DRAFT - Federal Final Investigation Report 120315.docx" />
+    <Content Include="INVESTIGATION TEMPLATES\INTERNAL\TML- DRAFT - State Final Investigation Report 012616.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\CLIENT INTRO PACKET\TML - Client Introduction Letter 110115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\CLIENT INTRO PACKET\TML - Client Introduction Packet Checklist 110115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\CLIENT INTRO PACKET\TML - Client Mitigation Overview 101515.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\CLIENT INTRO PACKET\TML - HIPPA &amp; Confidential Release 030516.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\CLIENT INTRO PACKET\TML - Mitigation Long Form 101515.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\CLIENT INTRO PACKET\TML - Prelimiary Mitigation Information Form 101515.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Amended Ex Parte Motion For Appt and Funding of Mitigation Specialist 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Ex Parte Expedited Motion Authorize Penalty Phase Costs 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Ex Parte Motion For Appointment of Phase 2 Investigator 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Ex Parte Motion for Appt and Funding of Psychological Trauma Expert 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Ex Parte Motion for Funding of Neuro-Psychologist 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Ex Parte Motion for Travel Costs for Attorney 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Ex Parte Motion for Travel Costs for Mitigation Specialist 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Motion for Extension of Time and Continuance 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\MOTIONS\TML - Motion to Hear Motions Ex Parte - Final 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Arresting Agency %28Audios &amp; DVD%27s%29 %28Public%29 102015.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Arresting Agency %28Public%29 102015.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Calls For Service %28Public%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Clerk of the Court %28Public%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Defense Attorney %28Public%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Drug Court %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Economic Assistance %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Education %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Employment %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Expert Report %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Faith &amp; Community %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Family %28Parent &amp; Caregiver%29 %28Public%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Foster Care %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - General Record Request %28Public%29 102015.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Government Social Services %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Immigration and Naturalization %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Jail and DOC %28Classification%29 %28Public%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Jail and DOC %28Medical%29 %28Private%29 112415.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Medical and Psychological Treatment %28Private%29102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Military %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Probation &amp; Parole %28Private%29 102015 .docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Social Security 102015 %28Private%29.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - State &amp; Federal Prosecution Records %28Public%29 102015.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\RECORD REQUEST LETTERS\TML - Youth Development %28Private%29 102015.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\Sample TLO - Records Custodian 022116.rtf" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Agency Failure to Respond to Record Request 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Client Signature Request 102615.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Follow Up to Client 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Mitigation Witness Failure to Respond 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Payment Receipt Request %28Follow Up%29 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Professional Mitigation Witnes Interview Request 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Record Payment 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\TML - Record Request %28Follow Up%29 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\WITNESS INTERVIEW FORMS\TML - Mitigation Witness Interview Prep Form - Email 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\WITNESS INTERVIEW FORMS\TML - Mitigation Witness Interview Prep Form - Text 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\WITNESS INTERVIEW FORMS\TML - Mitigation Witness Interview Prep Form 102115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\WITNESS INTRO PACKET\TML - Mitigation Witness Tips 110115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\WITNESS INTRO PACKET\TML - Witness Introduction 110115.docx" />
+    <Content Include="MITIGATION TEMPLATES\EXTERNAL\WITNESS INTRO PACKET\TML - Witness Mitigation Overview 110115.docx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\PENDING CQ REVIEW\TML - Capital Case Aggravating Factors Attorney Work Sheet 073015.docx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\PENDING CQ REVIEW\TML - Capital Case Mitigating Factors Attorney Work Sheet 073015.docx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\PENDING CQ REVIEW\TML - Cast of Characters 030315.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\PENDING CQ REVIEW\TML - Crime Chronology Timeline 021515.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\PENDING CQ REVIEW\TML - Digest of Discovery 073015.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\PENDING CQ REVIEW\TML - Social History Chronology 021615.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Mitigation Activity Timeline 012616.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Mitigation Attorney Request Log 111715.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Mitigation Interview 102515.docx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Mitigation Record Order Log 030916.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Mitigation Trial Prep Checklist 012216.docx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Mitigation Witness List %28Family, Friends and Professional%29 031816.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Records Summary 120315-1.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\INTERNAL\TML - Records Summary 120315.xlsx" />
+    <Content Include="MITIGATION TEMPLATES\TML- DRAFT - Federal Final Mitigation Report 120215.docx" />
+    <Content Include="MITIGATION TEMPLATES\TML- DRAFT - State Final Mitigation Report 112315.docx" />
+    <Content Include="PRIVATE INVESTIGATION TEMPLATES\TML - Notification and Authorization of Background Check 102615.docx" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\test.pubxml" />
+    <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="Tasks\TasksTab.aspx" />
+    <Content Include="Tasks\AssignTask.aspx" />
+    <Content Include="Tasks\AddNote.aspx" />
+    <Content Include="Cases\CaseEdit.aspx" />
+    <Content Include="Cases\CaseSelect.aspx" />
+    <Content Include="Cases\CasePage.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Images\MKTG - CQI_Final_Logo.jpg" />
+    <Content Include="App_Data\MasterCaseDatabase.mdf" />
+    <Content Include="App_Data\MasterCaseDatabase_log.ldf">
+      <DependentUpon>MasterCaseDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TemplatesPage.aspx" />
+    <Content Include="MasterPage.Master" />
+    <Content Include="Images\DefaultImage.png" />
+    <Content Include="Tasks\TimelineDataService.asmx" />
+    <Content Include="Tasks\timelinePage.aspx" />
+    <Content Include="UploadMedia\DefaultImage.png" />
+    <Content Include="Witness\WitnessDownload.aspx" />
+    <Content Include="Witness\WitnessDownloadSelected.aspx" />
+    <Content Include="Witness\WitnessDelete.aspx" />
+    <Content Include="Witness\WitnessEdit.aspx" />
+    <Content Include="Witness\WitnessEditSelected.aspx" />
+    <Content Include="Witness\WitnessAdd.aspx" />
+    <Content Include="Witness\WitnessList.aspx" />
+    <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="Templates\Doc1.docx" />
+    <Content Include="Templates\Record Request\TML - Arresting Agency %28Audios &amp; DVD%27s%29 %28Public%29 102015.docx" />
+    <Content Include="Templates\Record Request\TML - Arresting Agency %28Public%29 102015.docx" />
+    <Content Include="Templates\Record Request\TML - Calls For Service %28Public%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Clerk of the Court %28Public%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Defense Attorney %28Public%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Drug Court %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Economic Assistance %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Education %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Employment %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Expert Report %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Faith &amp; Community %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Family %28Parent &amp; Caregiver%29 %28Public%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Foster Care %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - General Record Request %28Public%29 102015.docx" />
+    <Content Include="Templates\Record Request\TML - Government Social Services %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Immigration and Naturalization %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Jail and DOC %28Classification%29 %28Public%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Jail and DOC %28Medical%29 %28Private%29 112415.docx" />
+    <Content Include="Templates\Record Request\TML - Medical and Psychological Treatment %28Private%29102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Military %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Probation &amp; Parole %28Private%29 102015 .docx" />
+    <Content Include="Templates\Record Request\TML - Social Security 102015 %28Private%29.docx" />
+    <Content Include="Templates\Record Request\TML - State &amp; Federal Prosecution Records %28Public%29 102015.docx" />
+    <Content Include="Templates\Record Request\TML - Youth Development %28Private%29 102015.docx" />
+    <Content Include="Templates\TML - Case Intake Sheet 120615.docx" />
+    <Content Include="Templates\TML - Case Intake Sheet.docx" />
+    <Content Include="Templates\TML - Case Intake Sheet.pdf" />
+    <Content Include="Templates\TML_-_Case_Intake_Sheet.pdf" />
+    <Content Include="Templates\Witness Templates\TML - Mitigation Witness Interview Prep Form 041116.docx" />
+    <Content Include="Templates\Witness Templates\TML - Mitigation Witness Tips 110115.docx" />
+    <Content Include="Templates\Witness Templates\TML - Witness Introduction 110115.docx" />
+    <Content Include="Templates\Witness Templates\TML - Witness Mitigation Overview 110115.docx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ForgotLogin.aspx.cs">
+      <DependentUpon>ForgotLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotLogin.aspx.designer.cs">
+      <DependentUpon>ForgotLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BillingPage.aspx.cs">
+      <DependentUpon>BillingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillingPage.aspx.designer.cs">
+      <DependentUpon>BillingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CaseAdd.aspx.cs">
+      <DependentUpon>CaseAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\CaseAdd.aspx.designer.cs">
+      <DependentUpon>CaseAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CaseAddEvent.aspx.cs">
+      <DependentUpon>CaseAddEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\CaseAddEvent.aspx.designer.cs">
+      <DependentUpon>CaseAddEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CaseDelete.aspx.cs">
+      <DependentUpon>CaseDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\CaseDelete.aspx.designer.cs">
+      <DependentUpon>CaseDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CaseEditSelected.aspx.cs">
+      <DependentUpon>CaseEditSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\CaseEditSelected.aspx.designer.cs">
+      <DependentUpon>CaseEditSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CaseInfo.aspx.cs">
+      <DependentUpon>CaseInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\CaseInfo.aspx.designer.cs">
+      <DependentUpon>CaseInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariables.aspx.cs">
+      <DependentUpon>GlobalVariables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlobalVariables.aspx.designer.cs">
+      <DependentUpon>GlobalVariables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\RecordsAdd.aspx.cs">
+      <DependentUpon>RecordsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\RecordsAdd.aspx.designer.cs">
+      <DependentUpon>RecordsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\RecordsDelete.aspx.cs">
+      <DependentUpon>RecordsDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\RecordsDelete.aspx.designer.cs">
+      <DependentUpon>RecordsDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\RecordsEdit.aspx.cs">
+      <DependentUpon>RecordsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\RecordsEdit.aspx.designer.cs">
+      <DependentUpon>RecordsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\RecordsEditSelected.aspx.cs">
+      <DependentUpon>RecordsEditSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\RecordsEditSelected.aspx.designer.cs">
+      <DependentUpon>RecordsEditSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\RecordsLog.aspx.cs">
+      <DependentUpon>RecordsLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\RecordsLog.aspx.designer.cs">
+      <DependentUpon>RecordsLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\TasksTab.aspx.cs">
+      <DependentUpon>TasksTab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\TasksTab.aspx.designer.cs">
+      <DependentUpon>TasksTab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\AssignTask.aspx.cs">
+      <DependentUpon>AssignTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\AssignTask.aspx.designer.cs">
+      <DependentUpon>AssignTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\AddNote.aspx.cs">
+      <DependentUpon>AddNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\AddNote.aspx.designer.cs">
+      <DependentUpon>AddNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CaseEdit.aspx.cs">
+      <DependentUpon>CaseEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\CaseEdit.aspx.designer.cs">
+      <DependentUpon>CaseEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CaseSelect.aspx.cs">
+      <DependentUpon>CaseSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\CaseSelect.aspx.designer.cs">
+      <DependentUpon>CaseSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\CasePage.aspx.cs">
+      <DependentUpon>CasePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\CasePage.aspx.designer.cs">
+      <DependentUpon>CasePage.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplatesPage.aspx.cs">
+      <DependentUpon>TemplatesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplatesPage.aspx.designer.cs">
+      <DependentUpon>TemplatesPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\TimelineDataService.asmx.cs">
+      <DependentUpon>TimelineDataService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tasks\timelinePage.aspx.cs">
+      <DependentUpon>timelinePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\timelinePage.aspx.designer.cs">
+      <DependentUpon>timelinePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Witness\WitnessDownload.aspx.cs">
+      <DependentUpon>WitnessDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness\WitnessDownload.aspx.designer.cs">
+      <DependentUpon>WitnessDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Witness\WitnessDownloadSelected.aspx.cs">
+      <DependentUpon>WitnessDownloadSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness\WitnessDownloadSelected.aspx.designer.cs">
+      <DependentUpon>WitnessDownloadSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Witness\WitnessDelete.aspx.cs">
+      <DependentUpon>WitnessDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness\WitnessDelete.aspx.designer.cs">
+      <DependentUpon>WitnessDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Witness\WitnessEdit.aspx.cs">
+      <DependentUpon>WitnessEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness\WitnessEdit.aspx.designer.cs">
+      <DependentUpon>WitnessEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Witness\WitnessEditSelected.aspx.cs">
+      <DependentUpon>WitnessEditSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness\WitnessEditSelected.aspx.designer.cs">
+      <DependentUpon>WitnessEditSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Witness\WitnessAdd.aspx.cs">
+      <DependentUpon>WitnessAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness\WitnessAdd.aspx.designer.cs">
+      <DependentUpon>WitnessAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Witness\WitnessList.aspx.cs">
+      <DependentUpon>WitnessList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness\WitnessList.aspx.designer.cs">
+      <DependentUpon>WitnessList.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cases\Cases Library\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57871</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57871/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
