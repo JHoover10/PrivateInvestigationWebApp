@@ -1,2 +1,2 @@
-# PrivateInvestWebApp
+# PrivateInvestigationWebApp
 Private Investigation web application
